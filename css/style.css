@@ -6,9 +6,42 @@
     --dark: #14183E;
 }
 
+.rtl{
+    text-align: right;
+    direction: rtl;
+}
+
 *{
     font-family: MyIranSans;
     text-align: right;
+}
+
+.navbar-brand small{
+    bottom: 5px;
+    position: absolute;
+    left: 0;
+}
+footer{
+    direction: rtl;
+    text-align: right;
+}
+
+p,.accordion-button, .dropdown-menu{
+    direction: rtl;
+    text-align: justify;
+}
+
+.accordion-button::after{
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.nav-item{
+    direction: rtl;
+}
+.nav-item .nav-link::after{
+    margin-right: 8px;
+    margin-left: 0;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -143,7 +176,7 @@ h6,
         transition: .5s;
     }
 
-    .navbar .nav-item:hover .dropdown-menu {
+    .navbar .nav-item:hover > .dropdown-menu {
         top: 100%;
         visibility: visible;
         transition: .5s;
@@ -499,7 +532,7 @@ h6,
     display: block;
     margin-bottom: 10px;
     padding: 0;
-    text-align: left;
+    text-align: right;
     color: rgba(255,255,255,.5);
     font-weight: normal;
     transition: .3s;
@@ -509,9 +542,9 @@ h6,
     color: #FFFFFF;
 }
 
-.footer .btn.btn-link::before {
+.footer .btn.btn-link::after {
     position: relative;
-    content: "\f105";
+    content: "\f104";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;
@@ -537,13 +570,13 @@ h6,
 }
 
 .footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(255, 255, 255, .1);
 }
 
 .footer .footer-menu a:last-child {
     margin-right: 0;
     padding-right: 0;
-    border-right: none;
+    border-left: none;
 }
